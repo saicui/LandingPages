@@ -101,8 +101,9 @@
   .section-lead {
     font-size: 16px;
     color: var(--ink-2);
-    max-width: 56ch;
+    max-width: 48ch;
     margin: 0;
+    text-wrap: pretty;
   }
   section.dark .section-lead { color: var(--muted-2); }
 
@@ -495,7 +496,12 @@
     font-weight: 600;
     color: var(--ink);
   }
-  .feature-points li b { color: var(--ink); font-weight: 600; }
+  .feature-points li b {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
 
   /* Photo analysis demo */
   .photo-demo {
@@ -965,7 +971,7 @@
           <span class="accent-body">記</span>録する。
         </h1>
         <p class="sub">
-          食事 / 運動 / 体組成を、ひとつのアプリでシンプルに。<br/>
+          食事 / 運動 / 体組成を、ひとつのアプリに。<br/>
           AI が記録の手間を肩代わりして、直近の傾向から<br/>
           あなた専用のフィードバックを返します。
         </p>
@@ -1131,8 +1137,7 @@
     <span class="eyebrow"><span class="num-pill">01</span> 3つを1つに</span>
     <h2 class="section-h">3 つを 1 つに。</h2>
     <p class="section-lead">
-      食事記録アプリ、運動記録アプリ、体組成アプリ。<br/>
-      それぞれを開く回数が増えるほど、記録は続かなくなる。MuveEats は 3 つを 1 画面のホームに統合します。
+      複数アプリを行き来するほど、記録は続かない。<br/>MuveEats は 3 つを 1 画面に統合しました。
     </p>
 
     <div class="three-to-one">
@@ -1247,24 +1252,24 @@
         <span class="eyebrow"><span class="num-pill">02</span> AI 記録</span>
         <h2 class="section-h">写真 1 枚で、記録完了。</h2>
         <p class="section-lead">
-          食事写真を撮るだけで AI が栄養素を推定。「ライス少なめ」のような短い補足文を加えると精度がさらに上がります。体組成計の表示画面を撮れば、数値も自動で抽出。
+          写真を撮るだけで AI が栄養素を推定。<br/>短い補足で精度も上がります。
         </p>
         <ul class="feature-points">
           <li>
             <span class="num-tag">1</span>
-            <span><b>食事写真 → PFC + kcal 自動入力。</b>マルチモーダル LLM が料理を識別し、量も推定します。</span>
+            <span><b>食事写真 → PFC + kcal 自動入力。</b>AI が料理と量を識別。</span>
           </li>
           <li>
             <span class="num-tag">2</span>
-            <span><b>補足文 (任意 / 200字) で精度向上。</b>「ライス少なめ」「ドレッシング別添」など、写真からは分からない情報を一行で。</span>
+            <span><b>補足文 (任意 / 200字) で精度向上。</b>「ライス少なめ」を一行で。</span>
           </li>
           <li>
             <span class="num-tag">3</span>
-            <span><b>体組成計の写真 → 数値 OCR。</b>体重・体脂肪率・筋肉量などを自動でテキスト化。手入力ゼロ。</span>
+            <span><b>体組成計の写真 → 数値 OCR。</b>手入力ゼロで記録。</span>
           </li>
           <li>
             <span class="num-tag">4</span>
-            <span><b>タグ自動推論。</b>「高タンパク」「脂質高め」「朝食」などのタグが自動で付き、振り返りが速い。</span>
+            <span><b>タグ自動推論。</b>「高タンパク」「朝食」などを自動付与。</span>
           </li>
         </ul>
       </div>
@@ -1320,20 +1325,20 @@
         <span class="eyebrow"><span class="num-pill">03</span> AI フィードバック</span>
         <h2 class="section-h">数字に意味を持たせる相棒。</h2>
         <p class="section-lead">
-          直近 7 日の食事・運動・体組成・目標を AI が一括で読み取り、良い点 / 改善 / 明日のアクションを 1 タップで生成。雑な数字の羅列を、行動に変えます。
+          7 日分のデータから、<br/>良い点・改善・明日のアクションを 1 タップで生成。
         </p>
         <ul class="feature-points">
           <li>
             <span class="num-tag">1</span>
-            <span><b>良い点 — まず褒めてから。</b>続いているもの・伸びているものを最初に。継続のモチベーションを支えます。</span>
+            <span><b>良い点 — まず褒めてから。</b>続いているものを最初に。</span>
           </li>
           <li>
             <span class="num-tag">2</span>
-            <span><b>改善 — 原因まで踏み込む。</b>「脂質が多い」だけで終わらず、「揚げ物が 3 回入っているのが主因」まで指摘。</span>
+            <span><b>改善 — 原因まで踏み込む。</b>「揚げ物が 3 回」まで指摘。</span>
           </li>
           <li>
             <span class="num-tag">3</span>
-            <span><b>明日のアクション — 具体的に。</b>「焼き魚 + 野菜炒め」レベルの粒度で提案。今日試せる行動に落とし込みます。</span>
+            <span><b>明日のアクション — 具体的に。</b>「焼き魚 + 野菜炒め」レベルで提案。</span>
           </li>
         </ul>
       </div>
@@ -1381,7 +1386,7 @@
     <span class="eyebrow"><span class="num-pill">04</span> テンプレ × クイック追加</span>
     <h2 class="section-h">決まり事は、1 タップで。</h2>
     <p class="section-lead">
-      毎日同じ朝食。胸の日のメニュー。決まり事は決まり事として、テンプレ化。ホームから 1 タップで記録できれば、続けるための摩擦はほぼゼロになります。
+      毎朝のオートミールも、胸の日のメニューも。<br/>テンプレ化してホームから 1 タップ。
     </p>
 
     <div class="quick-grid">
@@ -1468,7 +1473,7 @@
     <span class="eyebrow"><span class="num-pill">05</span> 画面ツアー</span>
     <h2 class="section-h">Beta v.1 の主要 6 画面。</h2>
     <p class="section-lead">
-      ホームから記録画面、体組成、履歴まで。横スクロールでご覧ください。
+      Beta v.1 の主要 6 画面。横スクロールでご覧ください。
     </p>
   </div>
 
